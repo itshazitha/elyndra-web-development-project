@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elyndra SignUp</title>
+<link href="css/bootstrap-4.4.1.css" rel="stylesheet" type="text/css">
+<link href="style_elyndra.css" rel="stylesheet" type="text/css" media="screen">
+	
+	<style>
+		
+	</style>
+</head>
+<body>
+	
+	<!-- Nav Bar -->
+	<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+	  <a class="navbar-brand" href="index.html">
+		<img src="images/MAJESTA Hotels Web Project logo (5).png" alt="Elyndra Hotels" width="215" height="73" class="img-fluid"/>
+	  </a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> 
+		<span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+		<ul class="navbar-nav mr-auto">
+		  <li class="nav-item"> 
+			<a class="nav-link" href="branches.html">Branches</a>
+		  </li>
+		  <li class="nav-item"> 
+			<a class="nav-link" href="packages.html">Packages</a>
+		  </li>
+		  <li class="nav-item"> 
+			<a class="nav-link" href="gallery.html">Gallery</a>
+		  </li>
+		  <li class="nav-item"> 
+			<a class="nav-link" href="about.html">About</a>
+		  </li>
+		  <li class="nav-item"> 
+			<a class="nav-link" href="contact.html">Contact</a>
+		  </li>
+		</ul>
+		<form class="form-inline my-2 my-lg-0">
+		  <a href="booking.html" class="btn btn-outline-success my-2 my-sm-0">Book Your Event</a>
+		</form>
+	  </div>
+	</nav>
+	
+  <main class="d-flex align-items-center py-5 py-md-6" style="min-height:100vh;">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 col-xl-6">
+
+          <div class="branding-bar">
+<div class="mt-3">
+            <img src="images/icon.png" alt="" width="100" height="60" class="img-fluid"/>
+            <h1 class="h3 brand-title mb-0">Step in to Elyndra Hotels</h1>
+              <p class="text-muted mb-0">Unlock member rates, late checkout, and exclusive offers</p>
+            </div>
+</div>
+
+          <div class="card">
+            <div class="card-body p-4 p-md-5 signup-card-body">
+              <form class="needs-validation" novalidate action="/signup" method="post">
+
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="firstName">First name <span class="req-dot">*</span></label>
+                    <input type="text" class="form-control" id="firstName" name="first_name" required pattern="[A-Za-z\s\-']+" title="Please enter a valid first name">
+                    <div class="invalid-feedback">Please enter a valid first name (letters, spaces, hyphens only).</div>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="lastName">Last name <span class="req-dot">*</span></label>
+                    <input type="text" class="form-control" id="lastName" name="last_name" required pattern="[A-Za-z\s\-']+" title="Please enter a valid last name">
+                    <div class="invalid-feedback">Please enter a valid last name (letters, spaces, hyphens only).</div>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-12">
+                    <label for="phone">Phone <span class="req-dot">*</span></label>
+                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="+94 71 234 5678" required pattern="^\+?[\d\s\-]{7,15}$" title="Enter a valid phone number, including country code">
+                    <small class="form-text text-muted">Include country code for international numbers.</small>
+                    <div class="invalid-feedback">Please enter a valid phone number.</div>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-12">
+                    <label for="email">Email <span class="req-dot">*</span></label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                    <div class="invalid-feedback">Please provide a valid email.</div>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-7">
+                    <label for="country">Country/Region <span class="req-dot">*</span></label>
+                    <select id="country" name="country" class="form-control" required>
+                      <option value="" selected disabled>Choose...</option>
+                      <option>Sri Lanka</option>
+                      <option>India</option>
+                      <option>United States</option>
+                      <option>United Kingdom</option>
+                      <option>Australia</option>
+                      <option>United Arab Emirates</option>
+                      <option>Singapore</option>
+                      <option>Other</option>
+                    </select>
+                    <div class="invalid-feedback">Please select a country.</div>
+                  </div>
+                  <div class="form-group col-md-5">
+                    <label for="birthday">Birth date <span class="req-dot">*</span></label>
+                    <input type="date" class="form-control" id="birthday" name="birthday" required max="">
+                    <div class="invalid-feedback">Please enter your birth date.</div>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-12">
+                    <label>Gender <span class="req-dot">*</span></label>
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" id="male" name="gender" class="custom-control-input" value="male" required>
+                      <label class="custom-control-label" for="male">Male</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" id="female" name="gender" class="custom-control-input" value="female" required>
+                      <label class="custom-control-label" for="female">Female</label>
+                    </div>
+                    <div class="invalid-feedback d-block">Please select your gender.</div>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="password">Password <span class="req-dot">*</span></label>
+                    <input type="password" class="form-control" id="password" name="password" required minlength="8" maxlength="32" aria-describedby="pwHelp"
+                      pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[\d\W]).{8,32}" title="Must contain 8-32 characters, one uppercase, one lowercase, and one number or special character">
+                    <div class="invalid-feedback">Password does not meet requirements.</div>
+                    <small id="pwHelp" class="form-text small-rule">8-32 chars, with uppercase, lowercase, and number or special char.</small>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="confirm">Confirm password <span class="req-dot">*</span></label>
+                    <input type="password" class="form-control" id="confirm" name="confirm_password" required>
+                    <div class="invalid-feedback">Passwords must match.</div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="offers" name="offers" checked>
+                    <label class="custom-control-label" for="offers">Send member offers and updates</label>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="terms" name="terms" required>
+                    <label class="custom-control-label" for="terms">I agree to the Terms &amp; Privacy</label>
+                    <div class="invalid-feedback d-block">Agreement is required to create an account.</div>
+                  </div>
+                </div>
+
+                <button type="submit" class="btn btn-ely btn-lg btn-block btn-email-popup">Join for free</button>
+
+                <p class="mt-3 mb-0 text-center small">
+                  Already a member? <a class="link-muted" href="/signin">Sign in</a>
+                </p>
+
+              </form>
+            </div>
+          </div>
+
+          <p class="text-center text-muted small mt-3">Standard Wi‑Fi is free for members. Benefits vary by property.</p>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+	<!-- Footer -->
+	<footer class="el-elyndra-footer">
+	  <div class="footer-main">
+		<div class="footer-section contact-info">
+		  <div class="footer-logo"><img src="images/MAJESTA Hotels Web Project logo (5).png" alt="ELYNDRA Hotels" width="400" height="137" class="img-fluid" /></div>
+		  <div class="footer-contact-label">Contact Info</div>
+		  <ul class="footer-contact-list">
+			<li><span class="footer-icon">&#9742;</span> ‪&nbsp; +94 555 444 666‬</li>
+			<li><span class="footer-icon">&#9993;</span> &nbsp; info@elyndrahotels.com</li>
+			<li><span class="footer-icon " style="transform: translateX(-3px);"><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#b3a073"><rect fill="none" height="24" width="24"/><path d="M12,2L12,2C8.13,2,5,5.13,5,9c0,1.74,0.5,3.37,1.41,4.84c0.95,1.54,2.2,2.86,3.16,4.4c0.47,0.75,0.81,1.45,1.17,2.26 C11,21.05,11.21,22,12,22h0c0.79,0,1-0.95,1.25-1.5c0.37-0.81,0.7-1.51,1.17-2.26c0.96-1.53,2.21-2.85,3.16-4.4 C18.5,12.37,19,10.74,19,9C19,5.13,15.87,2,12,2z M12,11.75c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5 S13.38,11.75,12,11.75z"/></svg></span> Colombo (Main Branch)</li>
+		  </ul>
+		</div>
+		<div class="footer-section newsletter">
+		  <div class="footer-newsletter-label">NEWSLETTER</div>
+		  <p class="footer-newsletter-text text-justify">
+		  Join our exclusive newsletter to receive seasonal discounts, early access to new facilities, special event packages, and member-only promotions delivered directly to your inbox - your gateway to the best Elyndra Hotels experiences in Sri Lanka! </p>
+		  <form class="footer-newsletter-form">
+			<input type="email" class="newsletter-input" placeholder="Enter Your Email..." required>
+			<button type="submit" class="newsletter-btn">Subscribe</button>
+		  </form>
+		</div>
+	  </div>
+	  <div class="footer-bottom">
+		© 2025, Elyndra. All Rights Reserved.
+	  </div>
+	</footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	
+  <script>
+    document.getElementById('birthday').max = new Date().toISOString().split("T")[0];
+
+    (function() {
+      'use strict';
+      var form = document.querySelector('.needs-validation');
+      form.addEventListener('submit', function(event) {
+        var pw = document.getElementById('password');
+        var cf = document.getElementById('confirm');
+        var genderMale = document.getElementById('male');
+        var genderFemale = document.getElementById('female');
+        var birthday = document.getElementById('birthday');
+
+        if (pw.value !== cf.value) {
+          cf.setCustomValidity('Passwords do not match');
+        } else {
+          cf.setCustomValidity('');
+        }
+
+        if (!genderMale.checked && !genderFemale.checked) {
+          genderMale.setCustomValidity('Please select your gender');
+        } else {
+          genderMale.setCustomValidity('');
+        }
+
+        var bdayValue = birthday.value;
+        if (!bdayValue || new Date(bdayValue) > new Date()) {
+          birthday.setCustomValidity('Please enter a valid birth date not in the future');
+        } else {
+          birthday.setCustomValidity('');
+        }
+
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    })();
+  </script>
+</body>
+</html>
