@@ -68,28 +68,32 @@ body {
     transform: translateX(3px);
 }
 
-
 .carousel {
     width: 100%;
     max-width: none;
 }
 
-.carousel-caption{
+.carousel-caption {
     color: white;
     font-size: 3rem;
     font-weight: 200;
     text-align: center;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8); 
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
     letter-spacing: 1px;
     margin-bottom: 0;
 }
 
 .card-body {
-    background-color: #CE8D4c; 
+    background-color: #CE8D4c;
     color: white;
     border-radius: 15px !important;
     overflow: hidden;
     padding: 5px 15px !important;
+}
+
+.signup-card-body {
+    background-color: #ffffff !important;
+    color: #22221f !important;
 }
 
 .card {
@@ -98,15 +102,15 @@ body {
     overflow: hidden;
 }
 
-.logo-home{
+.logo-home {
     align-content: center;
 }
 
 .image-container {
     display: flex;
-    justify-content: center; 
-    align-items: center; 
-    min-height: 200px; 
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
 }
 
 .image-container img {
@@ -121,24 +125,27 @@ body {
     margin-left: 56px;
     font-size: large;
 }
+.card-body.p-4.p-md-5.signup-card-body .needs-validation .btn.btn-ely.btn-lg.btn-block {
+	background-color: #F6C90E;
+}
 
 
 @media (max-width: 768px) {
     .carousel {
-        margin-top: 60px; 
+        margin-top: 60px;
     }
 }
 
 @media (max-width: 576px) {
     .carousel {
-        margin-top: 55px; 
+        margin-top: 55px;
     }
 }
 
 .carousel-item img {
     width: 100% !important;
-    height: 500px; 
-    object-fit: cover; 
+    height: 500px;
+    object-fit: cover;
 }
 
 .el-elyndra-footer {
@@ -261,6 +268,7 @@ body {
         padding: 30px 5% 10px 5%;
         gap: 28px;
     }
+
     .footer-section {
         max-width: 100%;
         padding: 0 0 24px 0;
@@ -410,21 +418,21 @@ body {
     .contact-form-section {
         padding: 60px 0;
     }
-    
+
     .contact-form-wrapper {
         padding: 40px 25px;
         border-radius: 15px;
     }
-    
+
     .contact-form-title {
         font-size: 2rem;
     }
-    
+
     .contact-form-subtitle {
         font-size: 1rem;
         margin-bottom: 30px;
     }
-    
+
     .contact-submit-btn {
         padding: 12px 30px;
         font-size: 1rem;
@@ -436,11 +444,11 @@ body {
         margin: 0 15px;
         padding: 30px 20px;
     }
-    
+
     .contact-form-title {
         font-size: 1.8rem;
     }
-    
+
     .contact-form .form-group {
         margin-bottom: 20px;
     }
@@ -455,10 +463,8 @@ body {
 .social-icon-link {
     text-decoration: none;
     transition: transform 0.3s ease;
-    margin: 25px; /* Increase this value for more gap */
+    margin: 25px; /* Increase gap */
 }
-
-
 
 .social-icon-link:hover {
     transform: translateY(-5px);
@@ -476,7 +482,7 @@ body {
     overflow: hidden;
 }
 
-/* Background colors for icons (optional - you can remove these if your PNGs have backgrounds) */
+/* Background colors for icons (optional) */
 .social-icon.whatsapp {
     background: linear-gradient(135deg, #e9ebea, #cdd3d2);
 }
@@ -506,7 +512,7 @@ body {
     transform: scale(1.1);
 }
 
-/* If your PNG icons already have colors/backgrounds, use this version instead */
+/* Transparent icon backgrounds */
 .social-icon.transparent {
     background: transparent;
     border: 2px solid #ddd;
@@ -522,12 +528,12 @@ body {
         width: 50px;
         height: 50px;
     }
-    
+
     .icon-image {
         width: 30px;
         height: 30px;
     }
-    
+
     body {
         padding-top: 100px;
         padding-left: 15px;
@@ -540,30 +546,32 @@ body {
         width: 45px;
         height: 45px;
     }
-    
+
     .icon-image {
         width: 25px;
         height: 25px;
     }
-    
+
     .social-icons-container {
         padding: 20px 0;
     }
 }
 
 /* CSS for image Hover */
-
 .img-hover-zoom {
-  overflow: hidden;
+    overflow: hidden;
 }
+
 .img-hover-zoom img {
-  transition: transform 0.5s ease;
+    transition: transform 0.5s ease;
 }
+
 .img-hover-zoom:hover img {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
+
 .custom-shadow {
-  box-shadow: 0 0.5rem 2rem rgba(0,0,0,0.6) !important;
+    box-shadow: 0 0.5rem 2rem rgba(0,0,0,0.6) !important;
 }
 
 /* CSS for form select menu */
@@ -594,30 +602,106 @@ body {
 }
 
 
-.image-stack {
-  min-height: 350px;
+.btn-email-popup {
+    background: linear-gradient(135deg, #CE8D4C 0%, #FFD700 100%) !important;
+    border: none !important;
+    color: #22221f !important;
+    font-weight: 700;
+    padding: 12px 30px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
 }
 
-.stack-img1, .stack-img2 {
-  width: 85%;
-  max-width: 300px;
+.btn-email-popup:hover {
+    background: linear-gradient(135deg, #FFD700 0%, #CE8D4C 100%) !important;
+    color: #22221f !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(206, 141, 76, 0.4);
 }
 
-@media (min-width: 992px) {
-  .stack-img1 {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    z-index: 1;
-	border: 4px solid #fff;
-  }
-  
-  .stack-img2 {
-    position: absolute;
-    top: 110px;
-    left: 50%;
-    z-index: 2;
-    border: 4px solid #fff;
-    transform: translateX(-50%);
-  }
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: var(--ely-bg);
+    font-family: 'Lato', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ely-primary);
+}
+
+.brand-title {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.5px;
+}
+
+.card {
+    border: 0;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.form-control {
+    border-radius: 0.5rem;
+    border-color: #e3e3e3;
+}
+
+.form-control:focus {
+    border-color: var(--ely-accent);
+    box-shadow: 0 0 0 0.2rem rgba(200,169,106,0.25);
+}
+
+.btn-ely {
+    background: var(--ely-accent);
+    color: #111;
+    border-radius: 0.5rem;
+    border: 0;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+.btn-ely:hover, .btn-ely:focus {
+    background: var(--ely-accent-dark);
+    color: #111;
+}
+
+.small-rule {
+    color: var(--ely-muted);
+    font-size: 0.875rem;
+}
+
+.req-dot {
+    color: #dc3545;
+}
+
+.branding-bar {
+    text-align: center;
+    margin-bottom: 1.25rem;
+}
+
+.branding-bar .logo-mark {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--ely-accent);
+    color: #111;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+}
+
+.link-muted {
+    color: var(--ely-muted);
+}
+
+.link-muted:hover {
+    color: var(--ely-accent-dark);
+    text-decoration: none;
+}
+
+/* Password hint list */
+.pw-hints li {
+    margin-bottom: 0.25rem;
 }
